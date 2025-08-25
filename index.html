@@ -4,16 +4,265 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>2025 포트폴리오</title>
+   <!-- 파비콘 -->
+   <link rel="icon" type="image/svg" href="">
+
+   <!-- Style -->
+   <link rel="stylesheet" href="./css/reset.css">
+   <link rel="stylesheet" href="./css/fonts.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   <link rel="stylesheet" href="./css/main.css">
+   
+   <!-- JS -->
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
-   <section class="sec5">
-         <div id="box5" class="box">
-            <p class="txt1">계절이 지나가는 하늘에는</p>
-            <p class="txt2">가을로 가득 차 있습니다.</p>
-            <p class="txt3">나는 아무 걱정도 없이</p>
-            <p class="txt4">가을 속의 별들을 다 헤일 듯 합니다.</p>
+   <div id="wrap">
+      <header id="header" class="scroll">
+            <div id="sideMenu">
+               <ul>
+                  <li data-target="section01" class="active"><span class="star">⁕</span> HOME</li>
+                  <li data-target="section02"><span class="star">⁕</span> ABOUT</li>
+                  <li data-target="section03"><span class="star">⁕</span> PORTFOLIO</li>
+                  <li data-target="section04"><span class="star">⁕</span> CONTACT</li>
+               </ul>
          </div>
-         <div class="num">05</div>
-      </section>
+      </header>
+
+      <main id="main_content">
+         <section id="section01" class="sec01">
+            <div id="box1" class="box">
+               <h2 class="txt1">Hi, i'm Yun Ji :)</h2>
+                  <p class="txt2">2020 - 2025</p>
+               <h3 class="txt3">PORTFOLIO</h3>
+            </div>
+         </section>
+
+         <!-- ABOUT -->
+         <section id="section02" class="sec02">
+            <div class="txt_con">
+               <h2>ABOUT</h2>
+               <div class="about">
+                  <div class="about01">
+                     <dl>
+                        <div class="profile">
+                           <dt>이름</dt>
+                           <dd>박윤지 Park Yun Ji</dd>
+                        </div>
+                        <div class="profile">
+                           <dt>생년월일</dt>
+                           <dd>2001.03.23</dd>
+                        </div>
+                        <div class="profile">
+                           <dt>휴대전화</dt>
+                           <dd>010-0000-0000</dd>
+                        </div>
+                        <div class="profile">
+                           <dt>이메일</dt>
+                           <dd>plopp01@naver.com</dd>
+                        </div>
+                        <div class="profile">
+                           <dt>학력</dt>
+                           <dd>숭의여자대학교 시각디자인과</dd>
+                        </div>
+                     </dl>
+                     <dl>
+                        <div class="certificate">
+                           <dt>자격증</dt>
+                           <div class="column">
+                              <dd>2018.07. GTQ 일러스트 1급</dd>
+                              <dd>2018.08. GTQ 인디자인 1급</dd>
+                              <dd>2018.12. GTQ 포토샵 1급</dd>
+                           </div>
+                        </div>
+                     </dl>
+                  </div>
+                  <div class="about02">
+                     <dl>
+                        <div class="skill">
+                           <dt>스킬</dt>
+                           <div class="column">
+                              <dd>Illustration</dd>
+                              <dd>Photoshop</dd>
+                              <dd>Indesign</dd>
+                              <dd>Figma</dd>
+                              <dd>HTML/CSS</dd>
+                           </div>
+                        </div>
+                     </dl>
+                     <dl>
+                        <div class="workexperience">
+                           <dt>경력</dt>
+                           <dd>2023.03.16. - 2024.10.19. (주)든든코퍼레이션</dd>
+                        </div>
+                     </dl>
+                     <dl>
+                        <div class="prize">
+                           <dt>수상</dt>
+                           <dd>2021. (사)한국일러스트레이션학회 입선</dd>
+                        </div>
+                     </dl>
+                     <dl>
+                        <div class="completion">
+                           <dt>수료</dt>
+                           <dd>2025.02. - 07. 하이미디어아카데미 HTML&CSS, AI 빅데이터 수료</dd>
+                        </div>
+                     </dl>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <!-- PORTFOLIO -->
+         <section id="section03" class="sec03">
+            <div class="txt_con">
+               <h2>PORTFOLIO</h2>
+            </div>
+            <div class="container">
+               <div class="tabs">
+                  <a href="#" class="tab active" data-tab="tab1"><span class="icon">⁕</span>전체</a>
+                  <a href="#" class="tab active" data-tab="tab2"><span class="icon">⁕</span>패키지</a>
+                  <a href="#" class="tab active" data-tab="tab3"><span class="icon">⁕</span>웹 / 모바일</a>
+                  <a href="#" class="tab active" data-tab="tab4"><span class="icon">⁕</span>포스터</a>
+                  <a href="#" class="tab active" data-tab="tab5"><span class="icon">⁕</span>프로모션</a>
+                  <a href="#" class="tab active" data-tab="tab6"><span class="icon">⁕</span>SNS 콘텐츠</a>
+               </div>
+            </div>
+            <div id="tab1" class="cont_list active">
+               <ul>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>팜팜텃밭 패키지</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>포스터1</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>포스터2</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>포스터3</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>포스터4</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>웹 / 모바일1</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>웹 / 모바일2</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>프로모션</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>SNS 콘텐츠1</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>SNS 콘텐츠2</span>
+                  </li>
+               </ul>
+            </div>
+            <div id="tab2" class="cont_list active">
+               <ul>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>팜팜텃밭 패키지</span>
+                  </li>
+               </ul>
+            </div>
+            <div id="tab3" class="cont_list active">
+               <ul>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>포스터1</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>포스터2</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>포스터3</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>포스터4</span>
+                  </li>
+               </ul>
+            </div>
+            <div id="tab4" class="cont_list active">
+               <ul>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>웹 / 모바일1</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>웹 / 모바일2</span>
+                  </li>
+               </ul>
+            </div>
+            <div id="tab5" class="cont_list active">
+               <ul>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>프로모션</span>
+                  </li>
+               </ul>
+            </div>
+            <div id="tab6" class="cont_list active">
+               <ul>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>SNS콘텐츠1</span>
+                  </li>
+                  <li>
+                     <img src="./img/" alt="">
+                     <span>SNS콘텐츠2</span>
+                  </li>
+               </ul>
+            </div>
+         </section>
+
+         <!-- CONTACT -->
+         <section id="section04" class="sec04">
+            <div class="txt_con">
+               <h2>CONTACT</h2>
+               <div class="contact">
+                  <dl>
+                     <dt>전화번호</dt>
+                     <dd>010-0000-0000</dd>
+                  </dl>
+                  <dl>
+                     <dt>이메일</dt>
+                     <dd>plopp01@naver.com</dd>
+                  </dl>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <!-- footer -->
+      <footer id="footer">
+         <div class="portfolio_info">
+            <address>
+               <a href="#section01">HOME</a> <span>|</span> <a href="#section02">ABOUT</a> <span>|</span> <a href="#section03">PORTFOLIO</a> <span>|</span> <a href="#section04">CONTACT</a> <br>
+               E - MAIL : plopp01@naver.com <span>|</span> 전화번호 : 010-4557-5224
+            </address>
+            <p class="copyright"><a href="#">&copy; 2025 Portfolio designed by Yun Ji</a></p>
+         </div>
+      </footer>
+   </div>
 </body>
 </html>
