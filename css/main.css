@@ -3,7 +3,7 @@
 /* common */
 :root {
    --main-blue: #1F66FF;
-   --main-h2: 4rem;
+   --thumb-h: 220px;
 }
 html, body {
    overflow-x: hidden;
@@ -14,7 +14,6 @@ html {
 }
 body {
    font-size: 1.6rem;
-   color: #222;
    font-family: 'KoPubDotum', 'G-Market-Sans', 'Noto Sans KR', 'MalgunGothic', 'AppleSDGothic', sans-serif;
 }
 section {
@@ -26,13 +25,9 @@ section {
    background-size: cover;
    color: #FFF;
 }
-h2, h3, .txt2, p{
+h2, h3, .txt_main, p{
    font-family: "G-Market-Sans";
    font-weight: 700;
-   /* line-height: 5.7rem; */
-   /* margin-bottom: 2rem; */
-   /* margin-top: 1.7rem; */
-   /* text-align: center; */
 }
 ul {
    font-family: "G-Market-Sans";
@@ -46,7 +41,7 @@ img {
    margin-left: 30rem;
 }
 .txt_con h2 {
-   font-size: 2rem;
+   font-size: 2.5rem;
 }
 
 
@@ -56,26 +51,25 @@ img {
    top: 50%;
    left: 7rem;
    transform: translateY(-50%);
-   color: var(--main-blue);
    font-weight: 700;
    transition: color 0.3s;
+   display: none;
 }
-#sideMenu li {
+#sideMenu li a {
    display: flex;
-   cursor: pointer;
+   flex-direction: row;
+   align-items: center;
+   text-align: center;
+   gap: 0.7rem;
    margin: 2rem 0;
    font-size: 1rem;
-   align-items: center;
-   gap: 1rem;
+   cursor: pointer;
 }
 #sideMenu li:hover {
    transform: translateX(5px);
 }
-#sideMenu .star {
-   font-size: 1.5rem;
-}
-#sideMenu li.active .star {
-   color: var(--main-blue);
+#sideMenu a .star {
+   font-size: 1.7rem;
 }
 
 
@@ -85,20 +79,63 @@ img {
    position: relative;
    align-items: center;
    justify-content: center;
+   height: 100vh;
 }
 .sec01 h2 {
-   font-size: 4rem;
+   font-size: 5rem;
 }
-.sec01 h3, .sec01 p {
+.sec01 .txt_main {
    position: absolute;
-   left: 0;
-   right: 0;
-   margin: 0;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    text-align: center;
-   font-size: 7rem;
-   font-weight: 700;
+   gap: 0.7rem;
    opacity: 0;
 }
+.sec01 h3 {
+   font-size: 5rem;
+   font-weight: 700;
+}
+.sec01 span {
+   font-size: 2rem;
+   font-weight: 500;
+   letter-spacing: 7px;
+}
+.sec01 .txt_menu {
+   position: absolute;
+   bottom: 2rem;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 20rem;
+   opacity: 0;
+}
+.sec01 .txt_menu .tab {
+   position: relative;
+   cursor: pointer;
+   color: #FFF;
+   text-decoration: none;
+   font-size: 1.3rem;
+   font-family: "G-Market-Sans";
+}
+/*  */
+.sec01 .txt_menu .star01 {
+   position: absolute;
+   bottom: 100%;
+   left: 50%;
+   transform: translateX(-50%) translateY(0);
+   opacity: 0;
+   transition: opacity 0.3s, transform 0.3s;
+}
+.sec01 .txt_menu .tab:hover .star01 {
+   opacity: 1;
+   transform: translateX(-50%) translateY(-5px);
+}
+
 
 
 /* ABOUT */
@@ -150,10 +187,13 @@ img {
 .sec03 {
    display: flex;
    flex-direction: column;
+   background-size: cover;
 }
 .sec03 h2 {
    margin: 15rem 0 3rem 0;
 }
+
+/* 탭 메뉴 */
 .tabs {
    display: flex;
    gap: 5rem;
@@ -188,13 +228,24 @@ img {
 
 /* 포트폴리오 이미지 */
 .tab-content {
-   max-height: 350px;
-   overflow: hidden;
-   transition: max-height 0.5s ease;
-   padding-bottom: 1rem; /* 화살표 공간 확보 */
-}
-.portfolio_gallery {
+   display: none;
+   height: auto;
+   overflow: visible;
    padding-left: 30rem;
+}
+.tab-content.active {
+   display: block;
+   overflow: visible;
+   height: auto;  
+}
+.tab-content ul {
+   width: 80%;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1.5rem;
+   overflow: hidden;
+   max-height: 0;
+   transition: max-height 0.6s ease;
 }
 .tab-content ul {
    width: 80%;
@@ -202,23 +253,72 @@ img {
    grid-template-columns: repeat(4, 1fr);
    gap: 1.5rem;
    margin-top: 2rem;
-   max-height: 350px; /* 4개 높이 */
    overflow: hidden;
-   transition: max-height 0.5s ease;
+   max-height: var(--thumb-h);
+   transition: max-height 0.6s ease;
 }
-
 .tab-content ul.expanded {
-   max-height: 1000px; /* 전체 펼치기 */
+   max-height: 5000px;
 }
-
 .tab-content li {
    position: relative;
+   overflow: hidden;
+}
+.portfolio_gallery {
+   width: 100%;
+   display: block;
+}
+.portfolio_gallery ul {
+   width: 85%;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1.5rem;
+   margin-top: 2rem;
+   overflow: hidden;
+   max-height: 400px;
+   transition: max-height 0.6s ease;
+}
+.portfolio_gallery ul.expanded {
+   max-height: 5000px;
+}
+.hidden {
+   display: none !important;
+}
+.portfolio_gallery li {
+   display: none;
+}
+.portfolio_gallery li.visible {
+   display: block;
+}
+.portfolio_gallery li img {
+   width: 100%;
+   display: block;
+}
+#tab1 .portfolio_gallery li {
+   display: none;
+}
+#tab1 .portfolio_gallery li.visible {
+   display: block;
+}
+#tab1 .portfolio_gallery ul {
+   max-height: 400px;
+   transition: max-height 0.6s ease;
+}
+#tab1 .portfolio_gallery ul.expanded {
+   max-height: 5000px;
 }
 
-.tab-content li:hover {
+/* hover 효과 */
+.tab-content li {
+   position: relative;
+   overflow: hidden;
+   transition: 0.3s;
+   border-radius: 0.5rem;
    box-shadow: 3px 3px 7px rgb(0, 0, 0, 0.3);
 }
-
+.tab-content li:hover {
+   box-shadow: 6px 6px 10px rgb(0, 0, 0, 0.3);
+}
 .tab-content li span {
    position: absolute;
    top: 50%;
@@ -235,36 +335,34 @@ img {
    line-height: 2rem;
    background: none;
 }
-
 .tab-content li:hover span {
    color: #fff;
    opacity: 1;
 }
-
 .tab-content li img:hover {
    filter: brightness(60%);
 }
-
 li span {
    color: var(--main-blue);
-   background: #000;
 }
 
 /* 토글 버튼 */
-.toggle-btn {
-   display: block;
-   text-align: center;
-   font-size: 2rem;
-   cursor: pointer;
-   margin-top: 1rem;
-   color: #fff;
+#tab1 .toggle-btn {
+   margin-top: 3rem;
    background: none;
    border: none;
+   cursor: pointer;
+   font-size: 3rem;
+   color: #FFF;
+   display: flex;
+   transform: translateX(43%);
+   width: 100%;
    transition: transform 0.3s;
 }
-
-.toggle-btn.active {
+#tab1 .toggle-btn.active i {
    transform: rotate(180deg);
+   transition: transform 0.3s;
+
 }
 
 

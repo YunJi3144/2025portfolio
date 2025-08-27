@@ -22,10 +22,10 @@
       <header id="header" class="scroll">
          <div id="sideMenu">
             <ul>
-               <li data-target="section01" class="active"><span class="star">⁕</span>HOME</li>
-               <li data-target="section02"><span class="star">⁕</span>ABOUT</li>
-               <li data-target="section03"><span class="star">⁕</span>PORTFOLIO</li>
-               <li data-target="section04"><span class="star">⁕</span>CONTACT</li>
+               <li><a href="section01"><span class="star">⁕</span>HOME</a></li>
+               <li><a href="section02" data-bg="#FFFFFF"><span class="star">⁕</span>ABOUT</a></li>
+               <li><a href="section03" data-bg="#1F66FF"><span class="star">⁕</span>PORTFOLIO</a></li>
+               <li><a href="section04" data-bg="#FFFFFF"><span class="star">⁕</span>CONTACT</a></li>
             </ul>
          </div>
       </header>
@@ -34,8 +34,15 @@
          <section id="section01" class="sec01">
             <div id="box1" class="box">
                <h2 class="txt1">Hi, i'm Yun Ji :)</h2>
-                  <p class="txt2">2020 - 2025</p>
-               <h3 class="txt3">PORTFOLIO</h3>
+               <div class="txt_main">
+                  <span class="txt2">2020 - 2025</span>
+                  <h3 class="txt2">PORTFOLIO</h3>
+               </div>
+               <div class="txt_menu">
+                  <a href="#section2" class="tab active" data-tab="tab1"><span class="star01">⁕</span>ABOUT</a>
+                  <a href="#section3" class="tab" data-tab="tab2"><span class="star01">⁕</span>PORTFOLIO</a>
+                  <a href="#section4" class="tab" data-tab="tab3"><span class="star01">⁕</span>CONTACT</a>
+               </div>
             </div>
          </section>
 
@@ -121,16 +128,15 @@
             </div>
             <div class="container">
                <div class="tabs">
-                  <a href="#tab1" class="tab active" data-tab="tab1"><span class="icon">⁕</span>전체</a>
-                  <a href="#tab2" class="tab" data-tab="tab2"><span class="icon">⁕</span>패키지</a>
-                  <a href="#tab3" class="tab" data-tab="tab3"><span class="icon">⁕</span>웹 / 모바일</a>
-                  <a href="#tab4" class="tab" data-tab="tab4"><span class="icon">⁕</span>포스터</a>
-                  <a href="#tab5" class="tab" data-tab="tab5"><span class="icon">⁕</span>프로모션</a>
-                  <a href="#tab6" class="tab" data-tab="tab6"><span class="icon">⁕</span>SNS 콘텐츠</a>
+                  <a href="#" class="tab active" data-tab="tab1"><span class="icon">⁕</span>전체</a>
+                  <a href="#" class="tab" data-tab="tab2"><span class="icon">⁕</span>패키지</a>
+                  <a href="#" class="tab" data-tab="tab3"><span class="icon">⁕</span>웹 / 모바일</a>
+                  <a href="#" class="tab" data-tab="tab4"><span class="icon">⁕</span>포스터</a>
+                  <a href="#" class="tab" data-tab="tab5"><span class="icon">⁕</span>프로모션</a>
+                  <a href="#" class="tab" data-tab="tab6"><span class="icon">⁕</span>SNS 콘텐츠</a>
                </div>
             </div>
 
-            <!-- 예시: 전체 탭 -->
             <div id="tab1" class="tab-content active">
                <div class="portfolio_gallery">
                   <ul>
@@ -176,20 +182,18 @@
                      </li>
                   </ul>
                </div>
-               <button class="toggle-btn">▼</button>
+               <button class="toggle-btn"><i class="ri-arrow-down-s-line"></i></button>
             </div>
 
-            <!-- 다른 탭도 동일 구조 유지 -->
             <div id="tab2" class="tab-content">
                <div class="portfolio_gallery">
                   <ul>
                      <li>
-                        <a href="#"><img src="./img/package01_thumbnail.png" alt="">
+                        <a href="./sub_01.package.html" target="_blank"><img src="./img/package01_thumbnail.png" alt="">
                         <span>팜팜텃밭 패키지</span></a>
                      </li>
                   </ul>
                </div>
-               <button class="toggle-btn">▼</button>
             </div>
 
             <div id="tab3" class="tab-content">
@@ -213,7 +217,6 @@
                      </li>
                   </ul>
                </div>
-               <button class="toggle-btn">▼</button>
             </div>
 
             <div id="tab4" class="tab-content">
@@ -229,7 +232,6 @@
                      </li>
                   </ul>
                </div>
-               <button class="toggle-btn">▼</button>
             </div>
 
             <div id="tab5" class="tab-content">
@@ -241,7 +243,6 @@
                      </li>
                   </ul>
                </div>
-               <button class="toggle-btn">▼</button>
             </div>
             
             <div id="tab6" class="tab-content">
@@ -257,10 +258,8 @@
                      </li>
                   </ul>
                </div>
-               <button class="toggle-btn">▼</button>
             </div>
          </section>
-
 
          <!-- CONTACT -->
          <section id="section04" class="sec04">
@@ -291,5 +290,6 @@
          </div>
       </footer>
    </div>
+   <script src="./js/main.js" defer></script>
 </body>
 </html>
