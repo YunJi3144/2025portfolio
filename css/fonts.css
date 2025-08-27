@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+/* 아이콘 */
+@import url("https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@xpressengine/xeicon@2.3.3/xeicon.min.css");
+
 /* 웹폰트: KoPub Dotum */
 @font-face {
    font-family: 'KoPub Dotum';

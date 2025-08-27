@@ -20,13 +20,13 @@
 <body>
    <div id="wrap">
       <header id="header" class="scroll">
-            <div id="sideMenu">
-               <ul>
-                  <li data-target="section01" class="active"><span class="star">⁕</span> HOME</li>
-                  <li data-target="section02"><span class="star">⁕</span> ABOUT</li>
-                  <li data-target="section03"><span class="star">⁕</span> PORTFOLIO</li>
-                  <li data-target="section04"><span class="star">⁕</span> CONTACT</li>
-               </ul>
+         <div id="sideMenu">
+            <ul>
+               <li data-target="section01" class="active"><span class="star">⁕</span>HOME</li>
+               <li data-target="section02"><span class="star">⁕</span>ABOUT</li>
+               <li data-target="section03"><span class="star">⁕</span>PORTFOLIO</li>
+               <li data-target="section04"><span class="star">⁕</span>CONTACT</li>
+            </ul>
          </div>
       </header>
 
@@ -121,119 +121,146 @@
             </div>
             <div class="container">
                <div class="tabs">
-                  <a href="#" class="tab active" data-tab="tab1"><span class="icon">⁕</span>전체</a>
-                  <a href="#" class="tab active" data-tab="tab2"><span class="icon">⁕</span>패키지</a>
-                  <a href="#" class="tab active" data-tab="tab3"><span class="icon">⁕</span>웹 / 모바일</a>
-                  <a href="#" class="tab active" data-tab="tab4"><span class="icon">⁕</span>포스터</a>
-                  <a href="#" class="tab active" data-tab="tab5"><span class="icon">⁕</span>프로모션</a>
-                  <a href="#" class="tab active" data-tab="tab6"><span class="icon">⁕</span>SNS 콘텐츠</a>
+                  <a href="#tab1" class="tab active" data-tab="tab1"><span class="icon">⁕</span>전체</a>
+                  <a href="#tab2" class="tab" data-tab="tab2"><span class="icon">⁕</span>패키지</a>
+                  <a href="#tab3" class="tab" data-tab="tab3"><span class="icon">⁕</span>웹 / 모바일</a>
+                  <a href="#tab4" class="tab" data-tab="tab4"><span class="icon">⁕</span>포스터</a>
+                  <a href="#tab5" class="tab" data-tab="tab5"><span class="icon">⁕</span>프로모션</a>
+                  <a href="#tab6" class="tab" data-tab="tab6"><span class="icon">⁕</span>SNS 콘텐츠</a>
                </div>
             </div>
-            <div id="tab1" class="cont_list active">
-               <ul>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>팜팜텃밭 패키지</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>포스터1</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>포스터2</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>포스터3</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>포스터4</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>웹 / 모바일1</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>웹 / 모바일2</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>프로모션</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>SNS 콘텐츠1</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>SNS 콘텐츠2</span>
-                  </li>
-               </ul>
+
+            <!-- 예시: 전체 탭 -->
+            <div id="tab1" class="tab-content active">
+               <div class="portfolio_gallery">
+                  <ul>
+                     <li>
+                        <a href="./sub_01.package.html" target="_blank"><img src="./img/package01_thumbnail.png" alt="">
+                        <span>01.<br>팜팜텃밭</span></a>
+                     </li>
+                     <li>
+                        <a href="./sub_01.poster.html" target="_blank"><img src="./img/poster01_thumbnail.png" alt="">
+                        <span>01.<br>PLEASE<br>BE A FRIENDS</span></a>
+                     </li>
+                     <li>
+                        <a href="#"><img src="./img/poster02_thumbnail.png" alt="">
+                        <span>02.<br>숨겨진<br>젊음을 찾으세요!</span></a>
+                     </li>
+                     <li>
+                        <a href="#"><img src="./img/poster03_thumbnail.png" alt="">
+                        <span>03.<br>HEPHEZ<br>WORSHIP</span></a>
+                     </li>
+                     <li>
+                        <a href="./sub_04.poster.html" target="_blank"><img src="./img/poster04_thumbnail.png" alt="">
+                        <span>04.<br>REVIVAL,<br>REVIVE ALL</span></a>
+                     </li>
+                     <li>
+                        <a href="./sub_01.web&mobile.html" target="_blank"><img src="./img/web&mobile01_thumbnail.png" alt="">
+                        <span>01.<br>건강한 다이어트<br>SMART CALORIE</span></a>
+                     </li>
+                     <li>
+                        <a href="sub_02.web&mobile.html" target="_blank"><img src="./img/web&mobile02_thumbnail.png" alt="">
+                        <span>02.<br>든든스낵<br>웹사이트 리디자인</span></a>
+                     </li>
+                     <li>
+                        <a href="sub_01.promotion.html" target="_blank"><img src="./img/promotion01_thumbnail.png" alt="">
+                        <span>01.<br>든든스낵<br>프로모션 디자인</span></a>
+                     </li>
+                     <li>
+                        <a href="sub_01.sns.html" target="_blank"><img src="./img/sns01_thumbnail.png" alt="">
+                        <span>01.<br>음식 광고 콘텐츠</span></a>
+                     </li>
+                     <li>
+                        <a href="sub_02.sns.html" target="_blank"><img src="./img/sns02_thumbnail.png" alt="">
+                        <span>02.<br>든든스낵<br>SNS 콘텐츠</span></a>
+                     </li>
+                  </ul>
+               </div>
+               <button class="toggle-btn">▼</button>
             </div>
-            <div id="tab2" class="cont_list active">
-               <ul>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>팜팜텃밭 패키지</span>
-                  </li>
-               </ul>
+
+            <!-- 다른 탭도 동일 구조 유지 -->
+            <div id="tab2" class="tab-content">
+               <div class="portfolio_gallery">
+                  <ul>
+                     <li>
+                        <a href="#"><img src="./img/package01_thumbnail.png" alt="">
+                        <span>팜팜텃밭 패키지</span></a>
+                     </li>
+                  </ul>
+               </div>
+               <button class="toggle-btn">▼</button>
             </div>
-            <div id="tab3" class="cont_list active">
-               <ul>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>포스터1</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>포스터2</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>포스터3</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>포스터4</span>
-                  </li>
-               </ul>
+
+            <div id="tab3" class="tab-content">
+               <div class="portfolio_gallery">
+                  <ul>
+                     <li>
+                        <a href="sub_01.poster.html" target="_blank"><img src="./img/poster01_thumbnail.png" alt="포스터 디자인01">
+                           <span>01.PLEASE<br>BE A FRIENDS</span></a>
+                     </li>
+                     <li>
+                        <a href="sub_02.poster.html" target="_blank"><img src="./img/poster02_thumbnail.png" alt="">
+                           <span>02. 숨겨진<br>젊음을 찾으세요!</span></a>
+                     </li>
+                     <li>
+                        <a href="sub_03.poster.html" target="_blank"><img src="./img/poster03_thumbnail.png" alt="">
+                           <span>03. HEPHEZ<br>WORSHIP</span></a>
+                     </li>
+                     <li>
+                           <a href="sub_04.poster.html" target="_blank"><img src="./img/poster04_thumbnail.png" alt="">
+                              <span>04. REVIVAL,<br>REVIVE ALL</span></a>
+                     </li>
+                  </ul>
+               </div>
+               <button class="toggle-btn">▼</button>
             </div>
-            <div id="tab4" class="cont_list active">
-               <ul>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>웹 / 모바일1</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>웹 / 모바일2</span>
-                  </li>
-               </ul>
+
+            <div id="tab4" class="tab-content">
+               <div class="portfolio_gallery">
+                  <ul>
+                     <li>
+                        <a href="sub_01.web&mobile.html" target="_blank"><img src="./img/web&mobile01_thumbnail.png" alt="">
+                        <span>01. 건강한 다이어트<br>SMART CALORIE</span></a>
+                     </li>
+                     <li>
+                        <a href="sub_02.web&mobile.html" target="_blank"><img src="./img/web&mobile02_thumbnail.png" alt="">
+                        <span>02. 든든스낵<br>웹사이트 리디자인</span></a>
+                     </li>
+                  </ul>
+               </div>
+               <button class="toggle-btn">▼</button>
             </div>
-            <div id="tab5" class="cont_list active">
-               <ul>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>프로모션</span>
-                  </li>
-               </ul>
+
+            <div id="tab5" class="tab-content">
+               <div class="portfolio_gallery">
+                  <ul>
+                     <li>
+                        <a href="sub_01.promotion.html" target="_blank"><img src="./img/promotion01_thumbnail.png" alt="">
+                        <span>01. 든든스낵<br>프로모션 디자인</span></a>
+                     </li>
+                  </ul>
+               </div>
+               <button class="toggle-btn">▼</button>
             </div>
-            <div id="tab6" class="cont_list active">
-               <ul>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>SNS콘텐츠1</span>
-                  </li>
-                  <li>
-                     <img src="./img/" alt="">
-                     <span>SNS콘텐츠2</span>
-                  </li>
-               </ul>
+            
+            <div id="tab6" class="tab-content">
+               <div class="portfolio_gallery">
+                  <ul>
+                     <li>
+                        <a href="sub_01.sns.html" target="_blank"><img src="./img/sns01_thumbnail.png" alt="">
+                        <span>01. 음식 광고 콘텐츠</span></a>
+                     </li>
+                     <li>
+                        <a href="sub_02.sns.html" target="_blank"><img src="./img/sns02_thumbnail.png" alt="">
+                        <span>02. 든든스낵<br>SNS 콘텐츠</span></a>
+                     </li>
+                  </ul>
+               </div>
+               <button class="toggle-btn">▼</button>
             </div>
          </section>
+
 
          <!-- CONTACT -->
          <section id="section04" class="sec04">

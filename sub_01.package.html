@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>01. 팜팜텃밭 패키지</title>
+   <!-- style sheet -->
+   <link rel="stylesheet" href="./css/reset.css">
+   <link rel="stylesheet" href="./css/fonts.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+
+   <!-- JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+   <style>
+      .container {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         padding: 0 210px;
+      }
+      .package_contents_swiper {
+         position: relative;
+         overflow: hidden;
+         background: #FDFAF8;
+         padding: 65px 0 25px 0;
+      }
+      .package_contents_swiper p {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: #7B3813;
+         font-size: 18px;
+         font-weight: 600;
+      }
+      .swiper-slide img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      .swiper-slide {
+         padding: 0 250px 50px 250px;
+         /* border: 1px solid #000; */
+      }
+
+      /* pagination */
+      .swiper-pagination {
+         bottom: 30px !important;
+         text-align: center;
+      }
+      .custom-bullet {
+         display: inline-block;
+         width: 20px;
+         height: 10px;
+         background-color: #E1CBBF;
+         border-radius: 10px;
+         margin: 0 5px;
+         cursor: pointer;
+      }
+      .custom-bullet-active {
+        background-color: #7B3813;
+      }
+      .swiper-pagination-progressbar {
+         display: none;
+      }
+
+      /* slide btn */
+      .slide_move {
+         position: absolute;
+         top: 50%;
+         left: 0;
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         transform: translateY(-50%);
+         padding: 0 100px;
+         z-index: 10;
+         pointer-events: none;
+      }
+      .slide_move button {
+         pointer-events: auto;
+         background: none;
+         border: none;
+         color: #AAA;
+         font-size: 50px;
+         cursor: pointer;
+         z-index: 11;
+      }
+      .slide_move .btn-prev {
+         left: -130px;
+      }
+      .slide_move .btn-next {
+         right: -130px;
+      }
+      .slide_move .btn-prev::after {
+         content: '\EA64';
+         font-size: 60px;
+         font-family: remixicon;
+      }
+      .slide_move .btn-next::after {
+         content: '\EA6E';
+         font-size: 60px;
+         font-family: remixicon;
+      }
+   </style>
+
+</head>
+<body>
+   <div class="container">
+      <img src="./img/package_01.svg" alt="팜팜텃밭 패키지">
+      <div id="swiper" class="package_contents_swiper">
+         <p class="txt">패키지 구성</p>
+         <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               <img src="./img/package_m.svg" alt="패키지_중">
+            </div>
+            <div class="swiper-slide">
+               <img src="./img/package_s01.svg" alt="패키지_소01">
+            </div>
+            <div class="swiper-slide">
+               <img src="./img/package_s02.svg" alt="패키지_소02">
+            </div>
+         </div>
+         <!-- pagination -->
+         <div class="swiper-pagination"></div>
+         <div class="slide_move">
+            <button class="btn-prev"></button>
+            <button class="btn-next"></button>
+         </div>
+      </div>
+      <img src="./img/package_01-1.svg" alt="팜팜텃밭 패키지">
+   </div>
+</body>
+
+<script>
+const swiper = new Swiper("#swiper", {
+   loop: true, // 끝나면 처음으로 돌아감
+   pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      type: 'bullets',
+      bulletClass: "custom-bullet", // 커스텀 클래스
+      bulletActiveClass: "custom-bullet-active", // 활성화 클래스
+   },
+   navigation: {
+      nextEl: ".btn-next",
+      prevEl: ".btn-prev",
+   },
+});
+</script>
+
+</html>

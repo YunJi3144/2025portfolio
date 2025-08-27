@@ -41,7 +41,7 @@ ul {
 img {
    width: 100%;
 }
-.txt_con, .container {
+.txt_con, .container, .cont_list.active {
    text-align: left;
    margin-left: 30rem;
 }
@@ -54,7 +54,7 @@ img {
 #sideMenu {
    position: fixed;
    top: 50%;
-   left: 9rem;
+   left: 7rem;
    transform: translateY(-50%);
    color: var(--main-blue);
    font-weight: 700;
@@ -64,16 +64,15 @@ img {
    display: flex;
    cursor: pointer;
    margin: 2rem 0;
-   font-size: 0.8rem;
+   font-size: 1rem;
    align-items: center;
-   gap: 1.3rem;
+   gap: 1rem;
 }
 #sideMenu li:hover {
    transform: translateX(5px);
 }
-#sideMenu li span .star {
-   font-size: 1rem;
-   color: #fff;
+#sideMenu .star {
+   font-size: 1.5rem;
 }
 #sideMenu li.active .star {
    color: var(--main-blue);
@@ -117,7 +116,7 @@ img {
 }
 .sec02 .about {
    display: flex;
-   gap: 3rem;
+   gap: 2rem;
 }
 .sec02 .about .profile, .certificate, .skill, .workexperience, .prize, .completion {
    width: 20rem;
@@ -165,54 +164,109 @@ img {
    text-decoration: none;
    color: #FFF;
    font-family: "G-Market-Sans";
-   font-weight: 700;
    font-size: 1.3rem;
    padding: 5px 0;
    line-height: 1;
 }
-
-/* 아이콘 숨기기 */
 .tabs .icon {
    position: absolute;
-   bottom: 90%;             /* 글씨 위 */
+   bottom: 90%;
    left: 50%;
    transform: translateX(-50%) translateY(0);
    opacity: 0;
    transition: opacity 0.3s, transform 0.3s;
    font-size: 1.2rem;
 }
-
-/* 호버 시 아이콘 나타나기 */
 .tabs .tab:hover .icon {
    opacity: 1;
    transform: translateX(-50%) translateY(-5px);
    color: #FFF;
 }
-
-/* 탭 활성화 스타일 */
 .tabs .tab.active {
-   font-weight: 500;
    color: #FFF;
 }
 
-.cont_list li span {
-   position: absolute;
-   bottom: 100%;
-   left: 50%;
-   transform: translateX(-50%) translateY(0);
-   opacity: 0;
-   transition: opacity 0.3s, transform 0.3s;
-   background-color: white;  /* 원하면 박스 배경 */
-   padding: 3px 6px;
-   border-radius: 4px;
-   pointer-events: none; 
-   white-space: nowrap;
+/* 포트폴리오 이미지 */
+.tab-content {
+   max-height: 350px;
+   overflow: hidden;
+   transition: max-height 0.5s ease;
+   padding-bottom: 1rem; /* 화살표 공간 확보 */
+}
+.portfolio_gallery {
+   padding-left: 30rem;
+}
+.tab-content ul {
+   width: 80%;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1.5rem;
+   margin-top: 2rem;
+   max-height: 350px; /* 4개 높이 */
+   overflow: hidden;
+   transition: max-height 0.5s ease;
 }
 
-.cont_list li:hover span {
-   opacity: 1;
-   transform: translateX(-50%) translateY(-5px);
+.tab-content ul.expanded {
+   max-height: 1000px; /* 전체 펼치기 */
 }
+
+.tab-content li {
+   position: relative;
+}
+
+.tab-content li:hover {
+   box-shadow: 3px 3px 7px rgb(0, 0, 0, 0.3);
+}
+
+.tab-content li span {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   white-space: nowrap;
+   opacity: 0;
+   transition: 0.3s;
+   pointer-events: none;
+   font-family: "KoPubDoTum";
+   font-size: 1.4rem;
+   font-weight: 600;
+   text-align: center;
+   line-height: 2rem;
+   background: none;
+}
+
+.tab-content li:hover span {
+   color: #fff;
+   opacity: 1;
+}
+
+.tab-content li img:hover {
+   filter: brightness(60%);
+}
+
+li span {
+   color: var(--main-blue);
+   background: #000;
+}
+
+/* 토글 버튼 */
+.toggle-btn {
+   display: block;
+   text-align: center;
+   font-size: 2rem;
+   cursor: pointer;
+   margin-top: 1rem;
+   color: #fff;
+   background: none;
+   border: none;
+   transition: transform 0.3s;
+}
+
+.toggle-btn.active {
+   transform: rotate(180deg);
+}
+
 
 
 /* contact */
