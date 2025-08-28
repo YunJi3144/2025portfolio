@@ -79,7 +79,6 @@ img {
    position: relative;
    align-items: center;
    justify-content: center;
-   height: 100vh;
 }
 .sec01 h2 {
    font-size: 5rem;
@@ -139,12 +138,15 @@ img {
 
 
 /* ABOUT */
-.sec02 {
+.sec02 .txt_con {
    display: flex;
+   flex-direction: column;
+   justify-content: center; 
+   align-items: flex-start;
+   gap: 3rem;
+   height: 100%;
 }
 .sec02 h2 {
-   margin-top: 15rem;
-   margin-bottom: 3rem;
    color: var(--main-blue);
 }
 .sec02 .txt_con dl, .txt_con dd {
@@ -161,13 +163,36 @@ img {
    margin-top: 1rem;
    margin-right: 1rem;
 }
-.sec02 dt {
+.sec02 .about01 dt {
    width: 30%;
    font-weight: 600;
 }
-.sec02 dd {
+.sec02 .about01 dd {
    margin-right: -30rem;
    font-weight: 400;
+}
+.sec02 .about02 dt {
+   width: 23%;
+   font-weight: 600;
+}
+.sec02 .about02 dd {
+   margin-right: -30rem;
+   font-weight: 400;
+}
+.sec02 .skill dd {
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+   position: relative;
+   font-weight: 500;
+}
+.sec02 .level span {
+   display: flex;
+   justify-content: left;
+   margin-bottom: 1rem;
+   margin-left: 7rem;
+   white-space: pre;
+   color: var(--main-blue);
 }
 .sec02 .certificate dd, .skill dd {
    margin-bottom: 1rem;
@@ -184,6 +209,9 @@ img {
 
 
 /* PORTFOLIO */
+#section03 {
+   overflow-x: hidden;
+}
 .sec03 {
    display: flex;
    flex-direction: column;
@@ -225,6 +253,11 @@ img {
 .tabs .tab.active {
    color: #FFF;
 }
+.tabs .tab.active .icon {
+   opacity: 1;
+   transform: translateX(-50%) translateY(-5px);
+   color: #FFF;
+}
 
 /* 포트폴리오 이미지 */
 .tab-content {
@@ -252,7 +285,7 @@ img {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    gap: 1.5rem;
-   margin-top: 2rem;
+   margin-top: 1.5rem;
    overflow: hidden;
    max-height: var(--thumb-h);
    transition: max-height 0.6s ease;
@@ -294,18 +327,19 @@ img {
    width: 100%;
    display: block;
 }
+#tab1 .portfolio_gallery ul {
+   max-height: 400px;
+   transition: max-height 0.6s ease;
+}
 #tab1 .portfolio_gallery li {
    display: none;
 }
 #tab1 .portfolio_gallery li.visible {
    display: block;
 }
-#tab1 .portfolio_gallery ul {
-   max-height: 400px;
-   transition: max-height 0.6s ease;
-}
 #tab1 .portfolio_gallery ul.expanded {
-   max-height: 5000px;
+   max-height: none; /* 높이 제한 해제 */
+   overflow: visible;
 }
 
 /* hover 효과 */
@@ -314,10 +348,9 @@ img {
    overflow: hidden;
    transition: 0.3s;
    border-radius: 0.5rem;
-   box-shadow: 3px 3px 7px rgb(0, 0, 0, 0.3);
 }
 .tab-content li:hover {
-   box-shadow: 6px 6px 10px rgb(0, 0, 0, 0.3);
+   box-shadow: 3px 3px 7px rgb(0, 0, 0, 0.3);
 }
 .tab-content li span {
    position: absolute;
@@ -332,7 +365,7 @@ img {
    font-size: 1.4rem;
    font-weight: 600;
    text-align: center;
-   line-height: 2rem;
+   line-height: 1.9rem;
    background: none;
 }
 .tab-content li:hover span {
@@ -340,7 +373,7 @@ img {
    opacity: 1;
 }
 .tab-content li img:hover {
-   filter: brightness(60%);
+   filter: brightness(40%);
 }
 li span {
    color: var(--main-blue);
@@ -355,7 +388,7 @@ li span {
    font-size: 3rem;
    color: #FFF;
    display: flex;
-   transform: translateX(43%);
+   transform: translateX(40.4%);
    width: 100%;
    transition: transform 0.3s;
 }
@@ -366,22 +399,24 @@ li span {
 }
 
 
-
 /* contact */
 .sec04 {
-   height: 30vh;
+   height: 50vh;
 }
 .sec04 .txt_con {
-   gap: 5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center; 
+   align-items: flex-start;
+   gap: 3rem;
+   height: 100%;
+}  
+.sec04 h2 {
+   color: var(--main-blue);
 }
 .sec04 .contact {
    display: flex;
    gap: 5rem;
-}
-.sec04 h2 {
-   margin-top: 10rem;
-   margin-bottom: 3rem;
-   color: var(--main-blue);
 }
 .sec04 dl {
    display: flex;
@@ -405,7 +440,7 @@ li span {
 footer {
    position: relative;
    z-index: 0;
-   padding: 5rem;
+   padding: 3.5rem;
 }
 footer::before {
    content: "";
