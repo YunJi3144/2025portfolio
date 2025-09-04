@@ -18,9 +18,21 @@
    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
-   <div class="notice">
-      *본 포트폴리오는 개인 포트폴리오용입니다. 이전 회사에서 진행했던 작업물이 포함되어 있으며 참고용으로만 봐주시면 감사드립니다.
+   <div id="portfolio-popup" class="popup">
+      <div class="popup-content">
+         <h2>⁕ 안내 ⁕</h2>
+            <ul class="portfolio-notice">
+               <li>본 포트폴리오는 개인 포트폴리오용으로 제작되었으며,<br> <strong>상업적 용도로 사용되지 않습니다.</strong>
+               </li>
+               <li>일부 작업물은 이전 근무 회사인 <strong>든든코퍼레이션</strong>에서 진행한<br> 프로젝트를 기반으로 포함되어 있으며, <strong>참고용으로만 제공</strong>됩니다.
+               </li>
+               <li>무단 복제나 배포는 삼가해 주세요.
+               </li>
+            </ul>
+         <button id="popup-close">닫기</button>
+      </div>
    </div>
+   
    <div id="wrap">
       <header id="header" class="scroll">
          <div id="sideMenu">

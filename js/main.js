@@ -1,3 +1,18 @@
+/* 팝업 열기/닫기 기능 */
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("portfolio-popup");
+  const closeBtn = document.getElementById("popup-close");
+
+  // 페이지 로드 시 팝업 보이기
+  popup.style.display = "flex";
+
+  // 닫기 버튼 클릭 시 팝업 숨기기
+  closeBtn.addEventListener("click", function () {
+    popup.style.display = "none";
+  });
+});
+
+
 /* 좌측 메뉴바 */
 const sideMenu = document.getElementById('sideMenu');
 const menuItems = sideMenu.querySelectorAll('li');
