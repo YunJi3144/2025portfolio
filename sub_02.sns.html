@@ -230,20 +230,18 @@
 </body>
 
 <script>
-// -------------------------------
-// 탭 전환 기능
-// -------------------------------
+/* 탭 전환 기능 */
 const tabs = document.querySelectorAll('.tab'); // 모든 탭 버튼
 const tabContents = document.querySelectorAll('.tab-content'); // 모든 탭 콘텐츠
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    // 1) 모든 탭 비활성화
+    // 모든 탭 비활성화
     tabs.forEach(t => t.classList.remove('active'));
-    // 2) 모든 탭 콘텐츠 숨김
+    // 모든 탭 콘텐츠 숨김
     tabContents.forEach(tc => tc.classList.remove('active'));
 
-    // 3) 클릭한 탭 활성화
+    // 클릭한 탭 활성화
     tab.classList.add('active');
     const target = document.getElementById(tab.dataset.tab);
     if (target) {
