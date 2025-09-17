@@ -22,18 +22,34 @@
          flex-direction: column;
          background: #787878;
       }
-      .container_web_all .insta_btn {
+      .container_web_all .btn {
+         display: flex;
+         justify-content: center;
+         flex-direction: row;
+         gap: 7rem;
+         margin-top: -10rem;
+      }
+      .container_web_all .dndnsnack_btn {
+         width: 20%;
          border: 2px solid #ffaa00;
          border-radius: 2rem;
-         padding: 0.6rem 0.2rem;
-         margin: -5rem 35rem 5rem 35rem;
-         font-size: 23px;
+         padding: 0.6rem 0;
+         font-size: 20px;
          color: #ffaa00;
       }
       .container_web_all button:hover {
          font-weight: 600;
          color: #787878;
          background: #ffaa00;
+      }
+      .container_web_all .txt_con {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         text-align: center;
+         gap: 0.5rem;
+         margin: 4rem 0;
+         color: #FFF;
       }
    </style>
 
@@ -43,9 +59,21 @@
       <img src="./img/web&mobile_02.svg" alt="사내 간식 복지 서비스 기업 ‘든든스낵’ 홈페이지">
       <div class="container_web_all">
          <img src="./img/web&mobile_02-1.svg" alt="스크롤 이미지" class="scroll-img">
-         <button class="insta_btn">
-            <a href="https://yunji3144.github.io/dndnsnack/" target="_blank">이동하기</a>
-         </button>
+         <div class="btn">
+            <button class="dndnsnack_btn">
+               <a href="https://www.wellmazing.co.kr/" target="_blank">기존 홈페이지</a>
+            </button>
+            <button class="dndnsnack_btn">
+               <a href="https://www.wellmazing.co.kr/dndnvendingmachine" target="_blank">참고 서비스 페이지</a>
+            </button>
+            <button class="dndnsnack_btn">
+               <a href="https://yunji3144.github.io/dndnsnack/" target="_blank">리뉴얼 디자인</a>
+            </button>
+         </div>
+         <div class="txt_con">
+            <span>⁕ ⁕ ⁕</span>
+            <p>본 리뉴얼 작업은 재직 당시 브랜드 아이덴티티(컬러·로고 기준)로 진행한 것입니다.<br>현재 홈페이지는 브랜드명과 컬러가 변경되어 직접 비교는 어렵지만, <br>다른 서비스 페이지에서 당시 브랜드 아이덴티티를 참고하실 수 있습니다.</p>
+         </div>
       </div>
    </div>
 </body>
